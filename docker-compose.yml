@@ -1,0 +1,24 @@
+version: '2.3'
+services:
+  kaggle-gpu:
+    build:
+      context: ./Docker
+      dockerfile: Dockerfile
+    shm_size: '2gb'
+    container_name: torch-docker 
+    user: "${UID}:${GID}"
+    runtime: nvidia
+    command: /bin/bash
+#    command: jupyter lab --port 9999 --ip=0.0.0.0  --allow-root --NotebookApp.token='' --NotebookApp.password=''
+    ports:
+      - "7000:7000"
+      - "9999:9999"
+      - "8501:8501"
+    environment:
+      - TZ=$TZ
+      - LANG=$LANG
+    tty: true
+    volumes:
+      - ./:/home/shuzo
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro

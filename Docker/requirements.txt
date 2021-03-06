@@ -1,0 +1,7 @@
+wandb==0.10.21
+sklearn
+matplotlib
+pandas
+torchsummary
+timm
+streamlit
