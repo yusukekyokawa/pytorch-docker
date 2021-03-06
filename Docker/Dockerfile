@@ -3,8 +3,7 @@
 FROM pytorch/pytorch:1.8.0-cuda11.1-cudnn8-devel
 
 # Install vim
-RUN apt-get update \
-    apt-get install -y vim
+RUN apt-get update && apt-get install -y vim
 
 
 WORKDIR /workspace
