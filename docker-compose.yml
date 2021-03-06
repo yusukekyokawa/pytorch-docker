@@ -19,6 +19,6 @@ services:
       - LANG=$LANG
     tty: true
     volumes:
-      - ./:/home/shuzo
+      - ./:/workspace
       - /etc/passwd:/etc/passwd:ro
       - /etc/group:/etc/group:ro
