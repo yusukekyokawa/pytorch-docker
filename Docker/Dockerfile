@@ -10,5 +10,6 @@ WORKDIR /workspace
 ADD requirements.txt /workspace
 
 # install python modules
-RUN pip intall -r requirements.txt
+RUN pip install -r requirements.txt
+
 
