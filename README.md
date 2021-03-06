@@ -42,7 +42,22 @@ Server: Docker Engine - Community
   Version:          0.19.0
   GitCommit:        de40ad0
 ```
+## Usage
 
+1. clone this repository
+```bash
+git clone https://github.com/yusukekyokawa/pytorch-docker.git
+cd pytorch-docker
+```
+
+2. sudo docker-compose up
+3. sudo docker-compose exec pytorch-docker bash
+
+change mount volumes
+
+```bash
+
+```
 
 ## Update
 2021/03/06
