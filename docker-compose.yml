@@ -1,6 +1,6 @@
 version: '2.3'
 services:
-  kaggle-gpu:
+  pytorch-docker:
     build:
       context: ./Docker
       dockerfile: Dockerfile

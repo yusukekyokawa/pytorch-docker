@@ -5,3 +5,5 @@ pandas
 torchsummary
 timm
 streamlit
+pixplot
+jupyterlab
