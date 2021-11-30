@@ -8,15 +8,19 @@ services:
     container_name: torch-docker 
     user: "${UID}:${GID}"
     runtime: nvidia
-    command: /bin/bash
+#     command: /bin/bash
 #    command: jupyter lab --port 9999 --ip=0.0.0.0  --allow-root --NotebookApp.token='' --NotebookApp.password=''
+    command: code-server --port 8080 --bind-addr=0.0.0.0:8080 /home/shuzo --log debug
     ports:
       - "7000:7000"
       - "9999:9999"
       - "8501:8501"
+      - "0.0.0.0:8080:8080"
+      - "0.0.0.0:8443:8443"
     environment:
       - TZ=$TZ
       - LANG=$LANG
+      - PASSWORD=$PASSWORD
     tty: true
     volumes:
       - ./:/workspace
